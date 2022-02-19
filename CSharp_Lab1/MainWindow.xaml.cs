@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace CSharp_Lab1
 {
@@ -12,16 +13,25 @@ namespace CSharp_Lab1
             InitializeComponent();
         }
 
-        private void ButtonAddName_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            /*if (!string.IsNullOrWhiteSpace(txtName.Text) && !lstNames.Items.Contains(txtName.Text))
+            var BYear = Birthday.DisplayDate.Year;
+            var BMonth = Birthday.DisplayDate.Month + 1;
+            var BDay = Birthday.DisplayDate.Day;
+            
+            var CYear = DateTime.Now.Year;
+            var CMonth = DateTime.Now.Month + 1;
+            var CDay = DateTime.Now.Day;
+
+            var yearsOld = CYear - BYear;
+
+            if (CMonth < BMonth && !((CMonth == BMonth) && CDay<BDay)) yearsOld--;
+            
+            if (yearsOld < 0 || yearsOld > 135)
             {
-                lstNames.Items.Add(txtName.Text);
-                txtName.Clear();
-            }*/
+                MessageBox.Show(" the date you entered is not correct, you can't be " + yearsOld + " years old",
+                    "ErrorMessage");
+            }
         }
-        
-        
-        
     }
 }
