@@ -15,30 +15,30 @@ namespace CSharp_Lab1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var BYear = Birthday.DisplayDate.Year;
-            var BMonth = Birthday.DisplayDate.Month;
-            var BDay = Birthday.DisplayDate.Day;
+            var bYear = Birthday.DisplayDate.Year;
+            var bMonth = Birthday.DisplayDate.Month;
+            var bDay = Birthday.DisplayDate.Day;
             
-            var CYear = DateTime.Now.Year;
-            var CMonth = DateTime.Now.Month;
-            var CDay = DateTime.Now.Day;
+            var year = DateTime.Now.Year;
+            var month = DateTime.Now.Month;
+            var day = DateTime.Now.Day;
 
-            var yearsOld = CYear - BYear;
+            var YearsOld = year - bYear;
 
-            if (CMonth < BMonth && !((CMonth == BMonth) && CDay<BDay)) yearsOld--;
+            if (month < bMonth && !((month == bMonth) && day<bDay)) YearsOld--;
             
-            if (yearsOld < 0 || yearsOld > 135)
+            if (YearsOld < 0 || YearsOld > 135)
             {
-                MessageBox.Show(" the date you entered is not correct, you can't be " + yearsOld + " years old",
+                MessageBox.Show(" the date you entered is not correct, you can't be " + YearsOld + " years old",
                     "ErrorMessage");
             }
             else
             {
-                Print_Age(CDay,BDay,CMonth,BMonth,yearsOld);
+                Print_Age(day,bDay,month,bMonth,YearsOld);
                 
-                Print_Zodiac(BDay,BMonth);
+                Print_Zodiac(bDay,bMonth);
                 
-                Print_Chinese(BYear);
+                Print_Chinese(bYear);
             }
         }
 
