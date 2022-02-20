@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharp_Lab1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="120" Width="525">
+        Title="MainWindow" Height="150" Width="525">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -29,9 +29,9 @@
         <TextBlock Grid.Column="0"  Grid.Row="2"> Zodiac: </TextBlock>
         <TextBlock Grid.Column="0"  Grid.Row="3"> Chinese: </TextBlock>
         
-        <TextBox Grid.Column="1" Grid.Row="1" x:Name="age" />
-        <TextBox Grid.Column="1" Grid.Row="2" x:Name="zodiac" />
-        <TextBox Grid.Column="1" Grid.Row="3" x:Name="chinese" />
+        <TextBlock Grid.Column="1" Grid.Row="1" x:Name="age" />
+        <TextBlock Grid.Column="1" Grid.Row="2" x:Name="zodiac" />
+        <TextBlock Grid.Column="1" Grid.Row="3" x:Name="chinese" />
         
     </Grid>
 </Window>
